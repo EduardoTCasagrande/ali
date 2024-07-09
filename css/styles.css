@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container, .containe {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.containe{
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    color: #333;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.highlight {
+    background: linear-gradient(135deg,#98FF98, #E6E6FA );
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.banner-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner-text a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.banner-text button:hover {
+    background-color: #555;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: center;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texto {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.products {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin: 20px;
+    border: #333 solid 2px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-bottom: #333 solid 2px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+    padding: 5px 0 5px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.product p {
+    font-size: 18px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos para telas grandes */
+@media (min-width: 769px) {
+    nav {
+        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        color: #333;
+        transform: none;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .nav-links ul {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0 20px;
+    }
+
+    .nav-links a {
+        color: #333;
+    }
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner-image {
+        margin-top: 20px;
+    }
+
+    .texto {
+        font-size: 20px;
+    }
+}
+#sobre {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f8f8;
+}
+
+#sobre .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#sobre h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
