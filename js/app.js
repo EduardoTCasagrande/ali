@@ -19,4 +19,19 @@ links.forEach(link => {
             navLinks.classList.remove('active');
         }
     });
-});
+    
+});// Obtenha o botão:
+let toTop = document.getElementById("toTop");
+
+// Quando o usuário rolar 20px da parte superior do documento, mostre o botão
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        toTop.style.display = "block";
+    } else {
+        toTop.style.display = "none";
+    }
+}
